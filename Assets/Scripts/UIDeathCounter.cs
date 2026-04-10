@@ -1,9 +1,9 @@
 using UnityEngine;
-using TMPro;
+using UnityEngine.UI;
 
 public class UIDeathCounter : MonoBehaviour
 {
-    public TMP_Text deathText;
+    public Text deathText;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

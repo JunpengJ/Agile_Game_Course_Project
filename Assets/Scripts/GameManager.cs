@@ -21,7 +21,6 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
      public void AddDeath()
     {
         DeathCount++;
@@ -34,6 +33,14 @@ public class GameManager : MonoBehaviour
     {
         DeathCount = 0;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void ResetDeathCount()
+    {
+        DeathCount = 0;
+        PlayerPrefs.SetInt("TotalDeaths", 0);
+        PlayerPrefs.Save();
+        Debug.Log("死亡计数已重置为 0");
     }
 }
 

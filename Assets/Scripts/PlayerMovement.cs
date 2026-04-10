@@ -25,6 +25,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        // rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
         playerHalfWidth = spriteRenderer.bounds.extents.x;
         startPosition = transform.position;
         if (groundLayer == 0) groundLayer = ~0;

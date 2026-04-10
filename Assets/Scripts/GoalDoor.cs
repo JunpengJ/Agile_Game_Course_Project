@@ -32,6 +32,7 @@ public class GoalDoor : MonoBehaviour
 
     void CompleteGame()
     {
+        GameManager.Instance.ResetDeathCount();
         if (victoryPanel != null)
         {
             victoryPanel.SetActive(true);
